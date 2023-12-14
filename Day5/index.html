@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element Selector */
+        /* div{
+            /* background-color: red; */
+        /* } */ */
+        /* Class Selector */
+        .red{
+            background-color: red;
+        }
+        /* Id Selector */
+        #green{
+            background-color: green;
+        }
+        /* Child Selector -- child shoud be just inside(one layer-- meaning here p is just inside div, so its child)  */ 
+        div > p {
+            background-color: cornflowerblue;
+            color: blue;
+        }
+        /* Descendant Selector  -- it should be inside , no matter how may layers deep*/
+        div p {
+            background-color: cornflowerblue;
+            color: blue;
+        }
+        /* Universal Selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* Pseudo Selector */
+        a:visited{
+            color: darkviolet;
+        }
+        a:link{
+            color: green;
+        }
+        a:active{
+            color: goldenrod;
+        }
+        a:hover{
+            color: brown;
+        }
+
+        p:first-child{
+            background-color: yellow;
+            color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>This is first Child</p>
+        <p>This is second Child</p>
+    </main>
+    <div class="red">
+        This is my first div
+        <article>
+            <p>
+                This is in Para in div
+            </p>
+        </article>
+    </div>
+    <div id="green">
+        This is another div
+    </div>
+    <a href="https://www.google.com">Welcome to Google</a>
+    <a href="https://www.linkedin.com">Welcome to Linkedin</a>
+
+</body>
+</html>
